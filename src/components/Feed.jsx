@@ -30,6 +30,9 @@ const Feed = () => {
     getFeed();
   }, []);
 
+  if (!users) return <h1 className="text-center mt-10">Loading...</h1>;
+  if (users.length === 0)
+    return <h1 className="text-center mt-10">No More People Found!</h1>;
   return <div>{users && <UserFeed key={users[0]._id} user={users[0]} />}</div>;
 };
 

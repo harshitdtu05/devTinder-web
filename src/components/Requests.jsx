@@ -28,7 +28,7 @@ const Requests = () => {
       const userData = await axios.get(BASE_URL + "/user/requests", {
         withCredentials: true,
       });
-      console.log(userData?.data?.data);
+
       dispatch(addRequests(userData?.data?.data));
     } catch (err) {
       if (err.status === 401) {
