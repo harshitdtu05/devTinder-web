@@ -33,11 +33,6 @@ const NavBar = () => {
           <p className="font-thin font-serif px-4">
             Welcome, {user?.firstName}
           </p>
-          <ul className="menu menu-horizontal px-1">
-            <li>
-              <a onClick={handleClickLogout}>Logout</a>
-            </li>
-          </ul>
 
           <div className="relative">
             <details>
@@ -60,11 +55,28 @@ const NavBar = () => {
                   </Link>
                 </li>
                 <li>
-                  <a className="cursor-pointer text-sm">Settings</a>
+                  <Link to="/connections" className="cursor-pointer text-sm">
+                    Settings
+                  </Link>
                 </li>
               </ul>
             </details>
           </div>
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <Link to="/connections">Connections</Link>
+            </li>
+          </ul>
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <Link to="/requests">Requests</Link>
+            </li>
+          </ul>
+          <ul className="menu menu-horizontal px-1">
+            <li>
+              <a onClick={handleClickLogout}>Logout</a>
+            </li>
+          </ul>
         </div>
       )}
     </div>
