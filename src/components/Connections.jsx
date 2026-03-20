@@ -7,7 +7,6 @@ import { addConnections } from "../utils/connectionSlice";
 const Connections = () => {
   const dispatch = useDispatch();
   const connectionsData = useSelector((store) => store.connections);
-  console.log(connectionsData);
 
   const fetchConnections = async () => {
     if (connectionsData) return;
